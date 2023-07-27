@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="character-info-header row">
+        <h1 class="m-0">
+            <span class="character-name">{{character.characterName}}</span>
+            <span *ngIf="character.realName != null" class="real-name">{{' ('+ character.realName + ')'}}</span>
+        </h1>
+    </div>
+    <hr class="my-3">
+    <div class="character-info-main row">
+        <div class="col-xxl-8 col-12">
+            <div class="character-description">
+                <p>{{character.description}}</p>
+            </div>
+        </div>
+        <div class="col-xxl-4 col-12">
+            <div class="row justify-content-center">
+                <div class="character-info-card card rounded-0 border-0">
+                    <img src={{character.imageUrl}} class="card-img-top rounded-0 shadow" alt="Image is missing">
+                    <div class="card-body">
+                        <table class="table table-sm table-bordered">
+                            <tbody>
+                            <tr>
+                                <td class="info-key">Character name</td>
+                                <td class="info-value">{{character.characterName}}</td>
+                            </tr>
+                            <tr *ngIf="character.realName != null">
+                                <td class="info-key">Real name</td>
+                                <td class="info-value">{{character.realName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">Alignment</td>
+                                <td class="info-value">{{character.alignment}}</td>
+                            </tr>
+                            <tr>
+                                <td class="info-key">Publisher</td>
+                                <td class="info-value">{{character.publisher}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
